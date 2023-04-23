@@ -13,7 +13,7 @@ class Email implements Notifier
     }
     public function send(): string
     {
-        return mail();
+        return mail('', '', $this->text);
     }
 }
 
@@ -35,7 +35,7 @@ class SMS extends Decorator
 
 class ChromeNotification extends Decorator
 {
-    public function render(): string
+    public function send(): string
     {
         return $this->notification->send();
     }
