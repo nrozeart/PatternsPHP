@@ -56,7 +56,7 @@ class OracleFactory implements ServiceFactoryInterface {
     public function createDBQueryBuilder();
 }
 
-
+//здесь можно выбрать другую фабрику
 $application = new Application(
     new MySQLFactory()
 );
